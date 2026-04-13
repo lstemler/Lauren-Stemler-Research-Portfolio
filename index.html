@@ -4,35 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lauren Stemler | Security Research & Strategy</title>
-  <meta name="description" content="Portfolio website for Lauren Stemler featuring research, projects, writing, and presentations." />
+  <meta
+    name="description"
+    content="Portfolio website for Lauren Stemler featuring research, projects, writing, and presentations."
+  />
   <style>
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f7f7;
       --card: #ffffff;
-      --border: rgba(0,0,0,0.08);
+      --border: rgba(0, 0, 0, 0.08);
       --text: #111111;
       --muted: #555555;
       --accent: #111111;
-      --accent-soft: rgba(0,0,0,0.04);
+      --accent-soft: rgba(0, 0, 0, 0.04);
       --max: 900px;
       --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
       font-size: 16px;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
     .container {
       width: min(calc(100% - 3rem), 980px);
@@ -44,8 +61,8 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     nav {
@@ -60,13 +77,6 @@
       font-weight: 600;
       letter-spacing: -0.01em;
       font-size: 1rem;
-    }
-
-    .brand span {
-      display: block;
-      font-weight: 500;
-      color: var(--muted);
-      font-size: 0.86rem;
     }
 
     .nav-links {
@@ -84,7 +94,9 @@
     }
 
     .nav-links a:hover,
-    .nav-links a.active { color: var(--text); }
+    .nav-links a.active {
+      color: var(--text);
+    }
 
     .nav-links a::after {
       content: "";
@@ -112,19 +124,6 @@
       grid-template-columns: 1fr;
       gap: 1.5rem;
       align-items: start;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.45rem 0.8rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.03);
-      color: var(--muted);
-      font-size: 0.86rem;
-      margin-bottom: 1rem;
     }
 
     h1 {
@@ -165,7 +164,7 @@
 
     .btn:hover {
       transform: translateY(-1px);
-      border-color: rgba(255,255,255,0.16);
+      border-color: rgba(0, 0, 0, 0.16);
     }
 
     .btn.primary {
@@ -174,34 +173,9 @@
       border-color: var(--text);
     }
 
-    .hero-card {
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 1.25rem;
-    }
-
-    .stat-block {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .stat {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding-bottom: 0.9rem;
-    }
-
-    .stat:last-child { border-bottom: 0; padding-bottom: 0; }
-    .stat .label { color: var(--muted); font-size: 0.92rem; }
-    .stat .value { font-size: 1.55rem; font-weight: 700; }
-
     section {
       padding: 4.5rem 0;
-      border-top: 1px solid rgba(0,0,0,0.05);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .section-title {
@@ -219,36 +193,6 @@
       font-weight: 600;
     }
 
-    .section-title p {
-      margin: 0.55rem 0 0;
-      color: var(--muted);
-      max-width: 66ch;
-      font-size: 1rem;
-    }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin: 1rem 0 1.5rem;
-    }
-
-    .chip {
-      padding: 0.55rem 0.85rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      background: rgba(255,255,255,0.03);
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .chip.active {
-      background: var(--accent-soft);
-      color: var(--text);
-      border-color: rgba(140,192,255,0.35);
-    }
-
     .grid {
       display: grid;
       gap: 1.25rem;
@@ -260,7 +204,7 @@
 
     .card {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
       border-radius: 18px;
       padding: 2rem;
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -268,8 +212,8 @@
 
     .card:hover {
       transform: translateY(-1px);
-      border-color: rgba(0,0,0,0.08);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.03);
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
     }
 
     .meta {
@@ -322,27 +266,18 @@
 
     .tag {
       font-size: 0.75rem;
-      color: #333;
+      color: #333333;
       background: #f2f2f2;
       border: 1px solid #e5e5e5;
       padding: 0.3rem 0.55rem;
       border-radius: 999px;
     }
 
-    .about-grid,
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
     }
-
-    .list {
-      margin: 0;
-      padding-left: 1.15rem;
-      color: var(--muted);
-    }
-
-    .list li + li { margin-top: 0.55rem; }
 
     footer {
       padding: 3rem 0 4rem;
@@ -354,14 +289,18 @@
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
-      border-top: 1px solid rgba(0,0,0,0.06);
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
       padding-top: 1.5rem;
       font-size: 0.92rem;
     }
 
+    #contact {
+      border-top: none;
+      padding-top: 2.5rem;
+    }
+
     @media (max-width: 900px) {
       .hero-grid,
-      .about-grid,
       .contact-grid,
       .work-grid {
         grid-template-columns: 1fr;
@@ -378,11 +317,9 @@
   <div class="nav-wrap">
     <div class="container">
       <nav>
-        <a class="brand" href="#top">
-          Lauren Stemler
-        </a>
+        <a class="brand" href="#top">Lauren Stemler</a>
         <div class="nav-links">
-          <a href="#work">Projects</a>
+          <a href="#work">Research</a>
           <a href="#speaking">Speaking</a>
           <a href="#contact">Contact</a>
         </div>
@@ -396,15 +333,19 @@
         <div>
           <h1>Lauren Stemler</h1>
           <p class="lead">
-            I work as an AI Security Researcher at Cisco Foundation AI, where I explore the connections between AI, cybersecurity, and emerging technology policy. Before joining Foundation AI, I spent time as a Cybersecurity Researcher at Splunk SURGe, digging into threat intelligence and the evolving techniques that define today&#39;s security landscape. I hold a Master&#39;s degree in Anticipatory Intelligence, a field focused on forecasting risk and navigating complex, uncertain futures. Below is a showcase of some of my work ranging from technical projects to geopolitical research.
+            I work as a Security Researcher for Cisco Talos, where I explore
+            the connections between cybersecurity, AI, and emerging technology policy.
+            Before joining Cisco Talos, I spent time as a Cybersecurity Researcher at
+            Splunk SURGe, digging into threat intelligence and the evolving techniques
+            that define today’s security landscape. I hold a Master’s degree in
+            Anticipatory Intelligence, a field focused on forecasting risk and
+            navigating complex, uncertain futures. Below is a showcase of some of my
+            work ranging from technical projects to geopolitical research.
           </p>
           <div class="cta-row">
-            <a class="btn primary" href="#work">View recent work</a>
-            
+            <a class="btn primary" href="#work">View research</a>
           </div>
         </div>
-
-        
       </div>
     </header>
 
@@ -413,19 +354,47 @@
         <div class="section-title">
           <div>
             <h2>Research Portfolio</h2>
-            
           </div>
-        </div>
-
-        <div class="filters">
-          <button class="chip active" data-filter="all">Most Recent to Oldest</button>
         </div>
 
         <div class="grid work-grid" id="workGrid">
           <article class="card" data-category="writing research">
             <div class="meta">Publication · 2026</div>
-            <h3><a href="https://www.splunk.com/en_us/blog/cio-office/ai-model-provenance-open-source-security.html" target="_blank" rel="noreferrer">How Provenance Enables Responsible Open-Source AI Governance</a></h3>
-            <p>Analysis of how model provenance, lineage, and upstream dependencies shape governance decisions for open-source AI adoption.</p>
+            <h3>
+              <a
+                href="https://www.splunk.com/en_us/blog/ciso-circle/ai-model-licensing-strategy.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                AI Model Licensing Strategy
+              </a>
+            </h3>
+            <p>
+              Analysis of AI model licensing strategy and the security, governance, and
+              operational considerations organizations should weigh when adopting models.
+            </p>
+            <div class="tag-row">
+              <span class="tag">AI Governance</span>
+              <span class="tag">Licensing</span>
+              <span class="tag">Model Risk</span>
+            </div>
+          </article>
+
+          <article class="card" data-category="writing research">
+            <div class="meta">Publication · 2026</div>
+            <h3>
+              <a
+                href="https://www.splunk.com/en_us/blog/cio-office/ai-model-provenance-open-source-security.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                How Provenance Enables Responsible Open-Source AI Governance
+              </a>
+            </h3>
+            <p>
+              Analysis of how model provenance, lineage, and upstream dependencies shape
+              governance decisions for open-source AI adoption.
+            </p>
             <div class="tag-row">
               <span class="tag">AI Governance</span>
               <span class="tag">Model Provenance</span>
@@ -435,8 +404,19 @@
 
           <article class="card" data-category="writing research">
             <div class="meta">Publication · 2025</div>
-            <h3><a href="https://www.splunk.com/en_us/blog/ciso-circle/when-ai-joins-the-chat.html" target="_blank" rel="noreferrer">When AI Joins the Chat: EchoLeak, End-to-End Encryption, and Silent Data Exposure</a></h3>
-            <p>Commentary on AI-enabled data exposure risks, and how emerging AI-assistant behaviors can undermine enterprise security.</p>
+            <h3>
+              <a
+                href="https://www.splunk.com/en_us/blog/ciso-circle/when-ai-joins-the-chat.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                When AI Joins the Chat: EchoLeak, End-to-End Encryption, and Silent Data Exposure
+              </a>
+            </h3>
+            <p>
+              Commentary on AI-enabled data exposure risks, and how emerging
+              AI-assistant behaviors can undermine enterprise security.
+            </p>
             <div class="tag-row">
               <span class="tag">AI Security</span>
               <span class="tag">Data Exposure</span>
@@ -446,8 +426,19 @@
 
           <article class="card" data-category="writing research">
             <div class="meta">Publication · 2025</div>
-            <h3><a href="https://www.splunk.com/en_us/blog/security/ssl-tls-threat-hunting.html" target="_blank" rel="noreferrer">Threat Hunting with TLS/SSL Certificates</a></h3>
-            <p>Research on how TLS/SSL certificate data can be used for threat hunting, infrastructure analysis, and earlier detection of suspicious activity.</p>
+            <h3>
+              <a
+                href="https://www.splunk.com/en_us/blog/security/ssl-tls-threat-hunting.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Threat Hunting with TLS/SSL Certificates
+              </a>
+            </h3>
+            <p>
+              Research on how TLS/SSL certificate data can be used for threat hunting,
+              infrastructure analysis, and earlier detection of suspicious activity.
+            </p>
             <div class="tag-row">
               <span class="tag">Threat Hunting</span>
               <span class="tag">TLS/SSL</span>
@@ -457,8 +448,19 @@
 
           <article class="card" data-category="research writing">
             <div class="meta">Publication · 2025</div>
-            <h3><a href="https://www.splunk.com/en_us/blog/security/insights-from-domain-registration-trends.html" target="_blank" rel="noreferrer">Predicting Cyber Fraud Through Real-World Events: Insights from Domain Registration Trends</a></h3>
-            <p>Research on how newly registered domains can help identify fraud infrastructure linked to real-world events and emerging scam campaigns.</p>
+            <h3>
+              <a
+                href="https://www.splunk.com/en_us/blog/security/insights-from-domain-registration-trends.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Predicting Cyber Fraud Through Real-World Events: Insights from Domain Registration Trends
+              </a>
+            </h3>
+            <p>
+              Research on how newly registered domains can help identify fraud
+              infrastructure linked to real-world events and emerging scam campaigns.
+            </p>
             <div class="tag-row">
               <span class="tag">NRDs</span>
               <span class="tag">Fraud</span>
@@ -468,8 +470,20 @@
 
           <article class="card" data-category="research project">
             <div class="meta">Capstone Project · 2025</div>
-            <h3><a href="assets/Capstone-Project-Stemler.pdf" target="_blank" rel="noreferrer">China’s Coal Buildout Signals Strategic Preparation for Taiwan Conflict</a></h3>
-            <p>Capstone research applying an anticipatory intelligence lens to China’s coal-fired power expansion, energy resilience, and possible indicators of conflict preparation. Includes an interactive mapping component.</p>
+            <h3>
+              <a
+                href="assets/Capstone-Project-Stemler.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                China’s Coal Buildout Signals Strategic Preparation for Taiwan Conflict
+              </a>
+            </h3>
+            <p>
+              Capstone research applying an anticipatory intelligence lens to China’s
+              coal-fired power expansion, energy resilience, and possible indicators of
+              conflict preparation. Includes an interactive mapping component.
+            </p>
             <div class="tag-row">
               <span class="tag">OSINT</span>
               <span class="tag">China</span>
@@ -479,8 +493,20 @@
 
           <article class="card" data-category="research project">
             <div class="meta">Research Project · 2024</div>
-            <h3><a href="assets/Texas-Grid-Project.pdf" target="_blank" rel="noreferrer">Texas Gas-Fired Power Plants Vulnerable to ICS Compromise Leading to Potential Regional Blackouts</a></h3>
-            <p>Analysis of vulnerabilities in Texas gas-fired power plants, focusing on industrial control system (ICS) compromise scenarios and potential impacts on regional grid stability and blackouts.</p>
+            <h3>
+              <a
+                href="assets/Texas-Grid-Project.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Texas Gas-Fired Power Plants Vulnerable to ICS Compromise Leading to Potential Regional Blackouts
+              </a>
+            </h3>
+            <p>
+              Analysis of vulnerabilities in Texas gas-fired power plants, focusing on
+              industrial control system (ICS) compromise scenarios and potential impacts
+              on regional grid stability and blackouts.
+            </p>
             <div class="tag-row">
               <span class="tag">Critical Infrastructure</span>
               <span class="tag">ICS Security</span>
@@ -490,8 +516,19 @@
 
           <article class="card" data-category="research project">
             <div class="meta">Research Paper · 2024</div>
-            <h3><a href="assets/Fortifying-Data-Security.pdf" target="_blank" rel="noreferrer">Fortifying Data Security: Embracing Quantum-Resistant Cryptography Against Emerging Threats</a></h3>
-            <p>Paper on the national security implications of quantum computing and the policy and techincal challenges of transitioning to post-quantum cryptography.</p>
+            <h3>
+              <a
+                href="assets/Fortifying-Data-Security.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Fortifying Data Security: Embracing Quantum-Resistant Cryptography Against Emerging Threats
+              </a>
+            </h3>
+            <p>
+              Paper on the national security implications of quantum computing and the
+              policy and technical challenges of transitioning to post-quantum cryptography.
+            </p>
             <div class="tag-row">
               <span class="tag">Cryptography</span>
               <span class="tag">Quantum Security</span>
@@ -507,7 +544,6 @@
         <div class="section-title">
           <div>
             <h2>Speaking</h2>
-            
           </div>
         </div>
 
@@ -515,35 +551,42 @@
           <article class="card">
             <div class="meta">Conference Speaking · 2026</div>
             <h3>GovSummit 2026 · Washington, DC</h3>
-            <p>Spoke to 900+ public sector attendees, about anticipating fraudulent domain registrations in the wake of major events.</p>
+            <p>
+              Spoke to 900+ public sector attendees about anticipating fraudulent
+              domain registrations in the wake of major events.
+            </p>
           </article>
+
           <article class="card">
             <div class="meta">Conference Speaking · 2025</div>
             <h3>SaintCon 2025 · Provo, Utah</h3>
-            <p>Spoke to 500+ attendees on the risk of AI in E2EE communications for a security-focused audience.</p>
+            <p>
+              Spoke to 500+ attendees on the risk of AI in E2EE communications for a
+              security-focused audience.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <style>
-      #contact { border-top: none; padding-top: 2.5rem; }
-    </style>
-
-    
-
     <section id="contact">
       <div class="container contact-grid">
         <div class="card">
           <h2>Contact</h2>
-          
           <div class="tag-row">
             <a class="btn" href="mailto:laurenstemler43@gmail.com">✉ Email</a>
-            <a class="btn" href="https://www.linkedin.com/in/laurenstemler/" target="_blank" rel="noreferrer">LinkedIn</a>
-            
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/laurenstemler/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
-        </section>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -552,20 +595,5 @@
       <div>Built for GitHub Pages</div>
     </div>
   </footer>
-
-  <script>
-    const chips = document.querySelectorAll('.chip');
-    const cards = document.querySelectorAll('#workGrid .card');
-
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        chips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-        cards.forEach(card => {
-          card.style.display = 'block';
-        });
-      });
-    });
-  </script>
 </body>
 </html>
